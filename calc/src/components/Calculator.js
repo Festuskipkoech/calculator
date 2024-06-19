@@ -6,7 +6,7 @@ const Calculator = () => {
   const [currentValue, setCurrentValue] = useState('');
   const [previousValue, setPreviousValue] = useState('');
   const [operator, setOperator] = useState('');
-  const [second, setSecond] = useState('');
+//   const [second, setSecond] = useState('');
 
 
   const handleButtonClick = (value) => {
@@ -47,7 +47,7 @@ const Calculator = () => {
     }
     setDisplay(result.toString());
     setCurrentValue(result.toString());
-    setSecond(currentValue.toString())
+    // setSecond(currentValue.toString())
   };
 
   const clearDisplay = () => {
@@ -63,8 +63,10 @@ const Calculator = () => {
 
   return (
     <div className="calculator">
-      <div className="display"> {previousValue} {operator} {second}</div>
-      <div className="display">{display}</div>
+      <div className="display"> {currentValue}</div>
+      <div className="display">{operator}</div>
+      <div className="display">{previousValue}</div>
+      {/* <div className="display">{display}</div> */}
       <div className="buttons">
         {[7, 8, 9, '/', 4, 5, 6, '*', 1, 2, 3, '-', 'C', 0, '=', '+', 'DEL'].map((btn) => (
           <button key={btn} onClick={() => handleButtonClick(btn)}>
