@@ -13,6 +13,10 @@ const Calculator = () => {
         }
         else if (value === 'C') {
             ClearAll;
+        }
+        else if (value=== 'DEL') {
+            deleteLastChar();
+
             
         }
     };
